@@ -1,0 +1,24 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    restart: always
+    build: .
+    volumes:
+      - .:/invite
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb 
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - DEV_MONGODB_URL=mongodb://mongodb/invite
+      - PROD_MONGODB_URL=mongodb://mongodb/invite
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    volumes:
+      - /tmp/data:/data/db
+    ports:
+      - "27018:27017"
