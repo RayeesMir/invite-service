@@ -30,5 +30,5 @@ Start Server and go to http://localhost:3000/apidocs/
 
 ## Docker 
 - `docker-compose up`
-  if it doesn't work may be u  need to change mongodb service volumes path as it different on Mac
+  if it doesn't work, u need to change mongodb service volumes path as it different on Mac and linux
 
