@@ -264,7 +264,7 @@ router.get('/admin/token/disable/:token', MiddleWare.validatePermission, Control
 
 
 /**
- * @api {get} http://localhost:3000/api/login Validate Invitation Token and Login 
+ * @api {get} http://localhost:3000/api/login Validate Invitation Token and Login (With throttling)
  * @apiName Validate Invitation Token and Login 
  * @apiGroup Login
  * 
